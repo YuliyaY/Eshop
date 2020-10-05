@@ -1,0 +1,4 @@
+node_modules/
+outputjs/
+package-lock.json
+debug.log

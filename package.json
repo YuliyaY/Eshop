@@ -1,0 +1,22 @@
+{
+  "name": "google_translate_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "before-test": "./node_modules/.bin/webdriver-manager update",
+    "tsc": "tsc",
+    "test": "tsc && protractor outputjs/protractor.conf.js"
+  },
+  "author": "Yuliya Kovalchuk",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.5.14",
+    "@types/node": "^14.10.0",
+    "jasmine": "^3.6.1",
+    "jasmine-spec-reporter": "^5.0.2",
+    "protractor": "^7.0.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
