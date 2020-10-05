@@ -12,8 +12,6 @@ describe("Amazon eshop tests", () => {
          let listOfPrices = await mainPage.allPrices.getAttribute('outerText');
          console.log(listOfPrices);
          console.log(mainPage.getTwoHighestPrices(listOfPrices));
-         // let mostExpensive = mainPage.getTwoHighestPrices(listOfPrices);
-         // await mainPage.getItemByPrice(mostExpensive[0]).click()
           for (const item of mainPage.getTwoHighestPrices(listOfPrices)) {
               await mainPage.getItemByPrice(item).click()
               await browser.wait(ExpectedConditions.visibilityOf(mainPage.addToCart),4000);

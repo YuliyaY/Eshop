@@ -37,8 +37,8 @@ export class MainPage {
         }
         const max = Math.max.apply(null, newListOfPrices)
         let maxIndex = newListOfPrices.indexOf(max);
-        let newListOfPrices2 = newListOfPrices
-        newListOfPrices2.splice(newListOfPrices2[maxIndex], 1);
+        let newListOfPrices2 = newListOfPrices        
+        newListOfPrices2.splice(newListOfPrices2[max], 1);
         let max2 = Math.max.apply(null, newListOfPrices2);
         let maxIndex2 = newListOfPrices.indexOf(max2)
 
