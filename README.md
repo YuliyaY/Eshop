@@ -1,4 +1,4 @@
-# notino.cz eshop test
+# amazon.com eshop test
 
 How to run:
 1. Install chrome browser, node.js with npm
