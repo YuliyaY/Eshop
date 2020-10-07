@@ -26,9 +26,19 @@ export class MainPage {
         return element(by.id('add-to-cart-button'))
     }
 
+    get addedToCartSideSheet(): ElementFinder {
+        return element(by.id('attach-desktop-sideSheet'))
+    }    
+
     get addedToCartText(): ElementFinder {
         return element(by.id('huc-v2-order-row-confirm-text'))
-    }    
+    } 
+    
+    get addedToCartText2(): ElementFinder {
+        return element(by.id('attachDisplayAddBaseAlert'))
+    } 
+    
+    
  
     getTwoHighestPrices(listOfPrices: String): string[] {
         let newListOfPrices = [];
@@ -37,12 +47,21 @@ export class MainPage {
         }
         const max = Math.max.apply(null, newListOfPrices)
         let maxIndex = newListOfPrices.indexOf(max);
-        let newListOfPrices2 = newListOfPrices        
-        newListOfPrices2.splice(newListOfPrices2[max], 1);
+        let newListOfPrices2 = newListOfPrices.slice()        
+        newListOfPrices2.splice(maxIndex, 1);
         let max2 = Math.max.apply(null, newListOfPrices2);
         let maxIndex2 = newListOfPrices.indexOf(max2)
 
         return [listOfPrices[maxIndex], listOfPrices[maxIndex2]]
     }
+
+    get cart(): ElementFinder {
+        return element(by.id('nav-cart'))
+    } 
+
+    get subtotal(): ElementFinder {
+        return element(by.id('sc-subtotal-label-activecart'))
+    }
+
    
 }
